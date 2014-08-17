@@ -4,9 +4,9 @@ using log4net.Config;
 
 class Sample
 {
-	static void Main(string[] args) 
-	{
-		XmlConfigurator.Configure(new System.IO.FileInfo("./log4net.config"));
+    static void Main(string[] args) 
+    {
+        XmlConfigurator.Configure(new System.IO.FileInfo("./log4net.config"));
 
         ILog logger = LogManager.GetLogger("mylogger");
 
@@ -21,5 +21,5 @@ class Sample
         logger = LogManager.GetLogger("unknown");
         logger.Info("log4net unknown : Sample start");
         logger.Info("log4net unknown : Sample end");
-	}
+    }
 }
